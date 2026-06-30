@@ -82,7 +82,7 @@
     }
 
     /* ── Sections ──────────────────────────────────────────────────── */
-    .section { border-top: 1px solid var(--line); padding-block: clamp(3.5rem, 8vw, 6rem); }
+    .section { border-top: 1px solid var(--line); padding-block: clamp(3rem, 6vw, 4.75rem); }
     .section.surface { background: var(--surface); }
 
     /* ── Buttons ───────────────────────────────────────────────────── */
@@ -154,7 +154,8 @@
       letter-spacing: -0.035em; line-height: 1.1; color: var(--graphite); margin-bottom: 1.4rem;
     }
     .hero-h1 em { font-style: normal; color: var(--green); }
-    .hero-lead { font-size: clamp(0.98rem, 2vw, 1.12rem); color: var(--ink); line-height: 1.75; max-width: 34rem; margin-bottom: 2rem; }
+    .hero-lead { font-size: clamp(0.98rem, 2vw, 1.12rem); color: var(--ink); line-height: 1.75; max-width: 34rem; margin-bottom: 1.1rem; }
+    .hero-note { font-size: 0.95rem; color: var(--muted); line-height: 1.7; max-width: 33rem; margin-bottom: 2rem; }
     .hero-lead strong { font-weight: 600; color: var(--graphite); }
     .hero-actions { display: flex; flex-direction: column; gap: 0.85rem; }
     @media (min-width: 480px) { .hero-actions { flex-direction: row; align-items: center; flex-wrap: wrap; } }
@@ -195,7 +196,7 @@
     /* ── CASOS PRÁTICOS ────────────────────────────────────────────── */
     .cases { margin-top: 3rem; display: flex; flex-direction: column; gap: 1.5rem; }
     .case {
-      background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg);
+      background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--green); border-radius: var(--r-lg);
       padding: clamp(1.5rem, 4vw, 2.4rem);
       display: grid; grid-template-columns: 1fr; gap: 1.25rem;
       transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
@@ -203,7 +204,7 @@
     @media (min-width: 800px) { .case { grid-template-columns: 200px 1fr; gap: 2.5rem; } }
     .case:hover { border-color: var(--green); box-shadow: 0 14px 40px rgba(30,70,58,0.08); transform: translateY(-2px); }
     .case-aside { display: flex; flex-direction: column; gap: 0.6rem; }
-    .case-num { font-family: var(--font-mono); font-size: 1.6rem; font-weight: 600; color: var(--amber); letter-spacing: -0.02em; line-height: 1; }
+    .case-num { font-family: var(--font-mono); font-size: 2rem; font-weight: 700; color: var(--amber); letter-spacing: -0.02em; line-height: 1; }
     .case-client { font-size: 1.02rem; font-weight: 600; color: var(--graphite); letter-spacing: -0.01em; }
     .case-context { font-size: 0.82rem; color: var(--green); font-weight: 500; }
     .case-body p { font-size: 0.94rem; color: var(--ink); line-height: 1.75; margin-bottom: 1.1rem; }
@@ -215,7 +216,7 @@
     .chip.note { color: var(--amber); background: var(--amber-tint); border-color: transparent; }
 
     /* ── VALORES ───────────────────────────────────────────────────── */
-    .values-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem 2.5rem; margin-top: 2.75rem; }
+    .values-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem 2.5rem; margin-top: 2.25rem; }
     @media (min-width: 700px) { .values-grid { grid-template-columns: repeat(2, 1fr); } }
     .value-card { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; }
     .value-card .vc-mark { font-family: var(--font-mono); font-size: 0.75rem; color: var(--green); border: 1px solid var(--green); border-radius: var(--r-sm); padding: 0.2rem 0.45rem; line-height: 1; margin-top: 4px; }
@@ -245,12 +246,12 @@
       .tl-date { display: none; }
       .tl-content::before { content: attr(data-date); display: block; font-family: var(--font-mono); font-size: 0.72rem; color: var(--amber); margin-bottom: 0.3rem; }
     }
-    .tl-date { font-family: var(--font-mono); font-size: 0.78rem; color: var(--amber); padding-block: 1.4rem; text-align: right; line-height: 1.4; }
+    .tl-date { font-family: var(--font-mono); font-size: 0.78rem; color: var(--amber); padding-block: 1rem; text-align: right; line-height: 1.4; }
     .tl-line { position: relative; display: flex; flex-direction: column; align-items: center; }
     .tl-line::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); width: 1px; background: var(--line); }
-    .tl-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 2px solid var(--muted-2); margin-top: 1.65rem; z-index: 1; flex-shrink: 0; transition: border-color 0.2s, background 0.2s; }
+    .tl-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 2px solid var(--muted-2); margin-top: 1.2rem; z-index: 1; flex-shrink: 0; transition: border-color 0.2s, background 0.2s; }
     .tl-row:hover .tl-dot { border-color: var(--green); background: var(--green); }
-    .tl-content { padding-block: 1.4rem; }
+    .tl-content { padding-block: 1rem; }
     .tl-role { font-size: 0.96rem; font-weight: 600; color: var(--graphite); margin-bottom: 0.25rem; }
     .tl-company { font-size: 0.82rem; color: var(--green); font-weight: 500; margin-bottom: 0.5rem; }
     .tl-desc { font-size: 0.86rem; color: var(--muted); line-height: 1.7; }
@@ -291,6 +292,25 @@
     .footer-nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
     .footer-nav a { font-size: 0.8rem; color: var(--muted-2); transition: color 0.2s; }
     .footer-nav a:hover { color: var(--graphite); }
+    /* ── Método em 4 etapas (Como trabalho melhor) ──────────────────── */
+    .method-steps { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2.75rem; }
+    @media (min-width: 760px) { .method-steps { grid-template-columns: repeat(4, 1fr); gap: 1.75rem; } }
+    .method-step { padding-top: 1.1rem; border-top: 2px solid var(--green); }
+    .method-step .ms-num { font-family: var(--font-mono); font-size: 0.78rem; color: var(--amber); margin-bottom: 0.6rem; }
+    .method-step h3 { font-size: 1rem; font-weight: 600; color: var(--graphite); margin-bottom: 0.4rem; letter-spacing: -0.01em; }
+    .method-step p { font-size: 0.88rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── "Meu papel" nos casos ──────────────────────────────────────── */
+    .case-role { font-size: 0.9rem; color: var(--ink); line-height: 1.65; margin-bottom: 1.1rem; max-width: 66ch; background: var(--bg); border-left: 2px solid var(--green); padding: 0.7rem 0.9rem; border-radius: 0 var(--r-sm) var(--r-sm) 0; }
+    .case-role strong { color: var(--green); font-weight: 600; }
+    .case-tags .chip { font-size: 0.7rem; padding: 0.25rem 0.6rem; }
+
+    /* ── Oportunidades: grupos de chips ─────────────────────────────── */
+    .opps-block { margin-top: 2.25rem; }
+    .opps-block h3 { font-family: var(--font-sans); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--amber-2); font-weight: 600; margin-bottom: 0.9rem; }
+    .opp-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .opp-chip { font-size: 0.82rem; color: #e9e6de; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.16); padding: 0.45rem 0.9rem; border-radius: var(--r-full); }
+
     /* ── Legibilidade: comprimento de linha (WCAG) ──────────────────── */
     .section-intro, .value-item p, .value-card p, .case-body p,
     .method-row > div, .ia-note p, .tl-desc, .contact-lead,
@@ -307,7 +327,7 @@
       <ul class="nav-links">
         <li><a href="#valor">Onde gero valor</a></li>
         <li><a href="#casos">Casos</a></li>
-        <li><a href="#trajetoria">Trajetória</a></li>
+        <li><a href="#metodos">Método</a></li>
         <li><a href="#oportunidades">Oportunidades</a></li>
       </ul>
       <a href="#contato" class="nav-cta">Fale comigo</a>
@@ -318,10 +338,11 @@
     </div>
     <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menu mobile">
       <a href="#valor">Onde gero valor</a>
-      <a href="#trabalho">Como trabalho melhor</a>
+      <a href="#trabalho">Como transformo ruído</a>
       <a href="#casos">Casos práticos</a>
+      <a href="#metodos">Método &amp; ferramentas</a>
       <a href="#valores">Valores</a>
-      <a href="#trajetoria">Trajetória</a>
+      <a href="#trajetoria">Base profissional</a>
       <a href="#oportunidades">Oportunidades</a>
       <a href="#contato" style="color:var(--green);font-weight:600;border-bottom:none">Fale comigo →</a>
     </div>
@@ -333,13 +354,17 @@
 <section class="hero" id="inicio" aria-labelledby="t-hero">
   <div class="hero-text-wrap">
     <div class="hero-text">
-      <span class="hero-eyebrow" data-aos="fade-up">Operações &nbsp;•&nbsp; Implantação &nbsp;•&nbsp; Projetos Técnicos</span>
+      <span class="hero-eyebrow" data-aos="fade-up">Análise &nbsp;•&nbsp; Operação &nbsp;•&nbsp; Entrega</span>
       <h1 class="hero-h1" id="t-hero" data-aos="fade-up" data-aos-delay="80">
         Entender o sistema<br>antes de <em>coordenar</em><br>a solução.
       </h1>
       <p class="hero-lead" data-aos="fade-up" data-aos-delay="160">
         Conecto <strong>tecnologia, operação, fornecedores e clientes</strong> para transformar
-        problemas dispersos em entregas funcionais, organizadas e acompanháveis.
+        problemas dispersos em entregas funcionais.
+      </p>
+      <p class="hero-note" data-aos="fade-up" data-aos-delay="200">
+        Atuo onde é preciso analisar o contexto, fazer as perguntas certas,
+        acompanhar a execução e garantir que a solução funcione na prática.
       </p>
       <div class="hero-actions" data-aos="fade-up" data-aos-delay="240">
         <a href="#valor" class="btn btn-primary">
@@ -372,32 +397,32 @@
 <section class="section surface" id="valor" aria-labelledby="t-valor">
   <div class="container">
     <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">01 /</span>Onde gero valor</p>
-    <h2 class="section-title" id="t-valor" data-aos="fade-up">Orquestração entre quem<br>projeta, opera e entrega.</h2>
+    <h2 class="section-title" id="t-valor" data-aos="fade-up">Onde gero valor.</h2>
     <p class="section-intro" data-aos="fade-up" data-aos-delay="60">
-      Atuo no ponto em que áreas técnicas, operação, fornecedores e clientes precisam falar a mesma língua —
-      garantindo que a solução planejada chegue funcionando à ponta.
+      Minha contribuição aparece quando a entrega depende da conexão entre pessoas, processos,
+      tecnologia, fornecedores e operação real.
     </p>
 
     <div class="value-grid">
       <div class="value-item" data-aos="fade-up" data-aos-delay="80">
-        <div class="vi-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M7 7l3 3M17 7l-3 3M7 17l3-3M17 17l-3-3"/></svg></div>
-        <h3>Orquestração técnico-operacional</h3>
-        <p>Conecto tecnologia, operação, fornecedores e clientes, alinhando expectativas e mantendo todos os elos coordenados do início ao fim.</p>
+        <div class="vi-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
+        <h3>Implantação e campo</h3>
+        <p>Acompanho prestadores de serviço, organizo pendências e ajudo a validar se a entrega funciona para a operação.</p>
       </div>
       <div class="value-item" data-aos="fade-up" data-aos-delay="140">
-        <div class="vi-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></svg></div>
-        <h3>Implantação e acompanhamento</h3>
-        <p>Do levantamento à entrega: instalação, validação, treinamento e pós-implantação, acompanhando a execução até funcionar de fato.</p>
+        <div class="vi-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Tecnologia aplicada</h3>
+        <p>Base em suporte, CFTV, antenas antifurto, monitoramento de PDVs e sistemas aplicados à operação.</p>
       </div>
       <div class="value-item" data-aos="fade-up" data-aos-delay="200">
         <div class="vi-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v4H4z"/><path d="M4 12h16v8H4z"/><path d="M8 16h8"/></svg></div>
-        <h3>Organização de processos e documentação</h3>
-        <p>Clareza operacional, rastreabilidade e registro de histórico — processos que sustentam o resultado mesmo quando alguém muda.</p>
+        <h3>Operação e processos</h3>
+        <p>Mapeio fluxos, encontro gargalos e documento rotinas para reduzir ruídos e retrabalho.</p>
       </div>
       <div class="value-item" data-aos="fade-up" data-aos-delay="260">
-        <div class="vi-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M11 8v3l2 2"/></svg></div>
-        <h3>Análise e solução de problemas</h3>
-        <p>Visão sistêmica para identificar a causa-raiz na interface entre áreas — onde o problema realmente nasce — e propor a correção.</p>
+        <div class="vi-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Cliente e fornecedores</h3>
+        <p>Traduzo necessidades entre cliente, usuários, fornecedores e equipes técnicas em ações objetivas.</p>
       </div>
     </div>
   </div>
@@ -407,14 +432,34 @@
 <!-- ═══ 3. COMO TRABALHO MELHOR ═══════════════════════════════════════ -->
 <section class="section" id="trabalho" aria-labelledby="t-trabalho">
   <div class="container">
-    <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">02 /</span>Como trabalho melhor</p>
-    <h2 class="section-title" id="t-trabalho" data-aos="fade-up">As condições em que entrego<br>o meu melhor trabalho.</h2>
+    <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">02 /</span>Como transformo ruído em entrega</p>
+    <h2 class="section-title" id="t-trabalho" data-aos="fade-up">Como transformo<br>ruído em entrega.</h2>
+    <p class="section-intro" data-aos="fade-up" data-aos-delay="60">
+      Tenho perfil analítico e autônomo. Trabalho melhor com objetivo claro,
+      responsabilidade definida e comunicação objetiva.
+    </p>
 
-    <div class="work-list">
-      <div class="work-row" data-aos="fade-up"><span class="work-num">01</span><p>Quando o problema é real e exige <span>entender o todo antes de agir.</span></p></div>
-      <div class="work-row" data-aos="fade-up" data-aos-delay="60"><span class="work-num">02</span><p>Quando há autonomia para <span>organizar processos, documentar e dar rastreabilidade.</span></p></div>
-      <div class="work-row" data-aos="fade-up" data-aos-delay="120"><span class="work-num">03</span><p>Quando é preciso <span>conectar áreas técnicas, operação, fornecedores e clientes.</span></p></div>
-      <div class="work-row" data-aos="fade-up" data-aos-delay="180"><span class="work-num">04</span><p>Quando a execução precisa de <span>acompanhamento próximo até a entrega funcional.</span></p></div>
+    <div class="method-steps">
+      <div class="method-step" data-aos="fade-up" data-aos-delay="80">
+        <div class="ms-num">01</div>
+        <h3>Entender o contexto</h3>
+        <p>Antes de agir, busco compreender o problema real, os envolvidos, as restrições e o impacto da decisão.</p>
+      </div>
+      <div class="method-step" data-aos="fade-up" data-aos-delay="140">
+        <div class="ms-num">02</div>
+        <h3>Organizar a informação</h3>
+        <p>Transformo informações dispersas em fluxos, registros, prioridades, checklists e critérios de acompanhamento.</p>
+      </div>
+      <div class="method-step" data-aos="fade-up" data-aos-delay="200">
+        <div class="ms-num">03</div>
+        <h3>Conectar os envolvidos</h3>
+        <p>Faço a ponte entre comercial, operação, cliente, fornecedores, usuários e áreas técnicas para reduzir ruídos.</p>
+      </div>
+      <div class="method-step" data-aos="fade-up" data-aos-delay="260">
+        <div class="ms-num">04</div>
+        <h3>Acompanhar até funcionar</h3>
+        <p>Valido a execução, acompanho pendências, registro aprendizados e ajudo a garantir a entrega.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -426,7 +471,7 @@
     <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">03 /</span>Casos práticos</p>
     <h2 class="section-title" id="t-casos" data-aos="fade-up">Onde a coordenação<br>virou entrega.</h2>
     <p class="section-intro" data-aos="fade-up" data-aos-delay="60">
-      Projetos reais em que atuei conectando tecnologia, operação e pessoas — do planejamento ao acompanhamento pós-entrega.
+      Projetos reais em que conectei tecnologia, operação e pessoas — do planejamento ao pós-entrega.
     </p>
 
     <div class="cases">
@@ -436,23 +481,22 @@
         <div class="case-aside">
           <div class="case-num">01</div>
           <div class="case-client">Kognos Tecnologia</div>
-          <div class="case-context">Segurança eletrônica & monitoramento em rede de varejo</div>
+          <div class="case-context">Segurança eletrônica & monitoramento em ambiente supermercadista</div>
         </div>
         <div class="case-body">
           <p>
-            Implantação e operação de uma solução completa de segurança e monitoramento para uma rede de
-            supermercados: central de monitoramento de CFTV, solução antifurto com antenas e etiquetas
-            eletrônicas e software de monitoramento de PDVs. Coordenei o acompanhamento de prestadores,
-            o treinamento das equipes e o suporte pós-instalação — garantindo que a tecnologia entregasse
-            resultado na operação diária da loja.
+            Projeto presencial em ambiente supermercadista envolvendo Central de Monitoramento CFTV,
+            solução antifurto com antenas e etiquetas eletrônicas, software de monitoramento de PDVs,
+            prestadores, treinamento e pós-instalação.
           </p>
+          <p class="case-role"><strong>Meu papel:</strong> acompanhar prestadores de serviço, apoiar decisões em campo, ajudar na solução de problemas, treinar usuários e validar o funcionamento após a instalação.</p>
           <div class="case-tags">
-            <span class="chip">Central de Monitoramento CFTV</span>
-            <span class="chip">Antifurto (antenas + etiquetas)</span>
-            <span class="chip">Monitoramento de PDVs</span>
-            <span class="chip">Gestão de prestadores</span>
-            <span class="chip">Treinamento</span>
+            <span class="chip">CFTV</span>
+            <span class="chip">Antifurto</span>
+            <span class="chip">Supermercados</span>
+            <span class="chip">Prestadores</span>
             <span class="chip">Pós-instalação</span>
+            <span class="chip">PDVs</span>
           </div>
         </div>
       </article>
@@ -462,22 +506,27 @@
         <div class="case-aside">
           <div class="case-num">02</div>
           <div class="case-client">VOI Ambientes</div>
-          <div class="case-context">Processos entre projeto, produção, entrega e instalação</div>
+          <div class="case-context">Ambiente industrial/moveleiro — projeto, produção, entrega e instalação</div>
         </div>
         <div class="case-body">
           <p>
-            Atuação na coordenação dos processos que ligam projeto, produção, entrega e instalação:
-            documentação, análise de gargalos e melhoria operacional, com apoio de ERP/sistema integrado
-            a IA. Concebi o projeto <strong>Casa do Cliente</strong>, voltado à jornada do cliente e ao
-            Customer Success — não implementado em razão do fechamento da empresa.
+            Atuação conectando projeto, produção, entrega e instalação. Mapeei gargalos, organizei
+            informações, apoiei processos e participei da criação de soluções internas com IA.
           </p>
+          <p>
+            Também idealizei o projeto <strong>Casa do Cliente</strong>, voltado à jornada do cliente e à
+            conexão entre setores. Não foi implementado devido ao fechamento da empresa, mas consolidou
+            minha visão sobre Customer Success aplicado à operação.
+          </p>
+          <p class="case-role"><strong>Meu papel:</strong> diagnosticar falhas, organizar informações, propor fluxos, conectar setores e apoiar soluções práticas para melhorar a operação.</p>
           <div class="case-tags">
-            <span class="chip">Mapeamento de processos</span>
-            <span class="chip">Documentação</span>
-            <span class="chip">Análise de gargalos</span>
-            <span class="chip">ERP / sistema com IA</span>
-            <span class="chip">Melhoria operacional</span>
-            <span class="chip note">Casa do Cliente — não implementado</span>
+            <span class="chip">Processos</span>
+            <span class="chip">Customer Success</span>
+            <span class="chip">Jornada do Cliente</span>
+            <span class="chip">ERP</span>
+            <span class="chip">IA Aplicada</span>
+            <span class="chip">Moveleiro</span>
+            <span class="chip note">Casa do Cliente</span>
           </div>
         </div>
       </article>
@@ -491,15 +540,16 @@
         </div>
         <div class="case-body">
           <p>
-            Atuação técnico-comercial em tecnologia corporativa e segurança eletrônica, com relacionamento
-            direto com clientes e fornecedores, suporte e pós-venda. Experiência prática no ciclo completo —
-            do entendimento da necessidade ao acompanhamento da solução em operação.
+            Experiência em relacionamento técnico-comercial, tecnologia corporativa, segurança eletrônica,
+            clientes corporativos, fornecedores, suporte e pós-venda.
           </p>
+          <p class="case-role"><strong>Meu papel:</strong> compreender necessidades, articular solução técnica, acompanhar demandas e apoiar a entrega entre áreas comerciais, técnicas e operacionais.</p>
           <div class="case-tags">
-            <span class="chip">Segurança eletrônica</span>
-            <span class="chip">Relacionamento técnico-comercial</span>
-            <span class="chip">Clientes & fornecedores</span>
-            <span class="chip">Suporte</span>
+            <span class="chip">Tecnologia Corporativa</span>
+            <span class="chip">Segurança Eletrônica</span>
+            <span class="chip">Técnico-Comercial</span>
+            <span class="chip">Clientes</span>
+            <span class="chip">Fornecedores</span>
             <span class="chip">Pós-venda</span>
           </div>
         </div>
@@ -510,56 +560,30 @@
 </section>
 
 
-<!-- ═══ 5. VALORES ════════════════════════════════════════════════════ -->
-<section class="section" id="valores" aria-labelledby="t-valores">
+<!-- ═══ 4-B. MÉTODO E FERRAMENTAS ═════════════════════════════════════ -->
+<section class="section" id="metodos" aria-labelledby="t-metodos">
   <div class="container">
-    <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">04 /</span>Valores que orientam meu trabalho</p>
-    <h2 class="section-title" id="t-valores" data-aos="fade-up">O que sustenta cada<br>decisão e cada entrega.</h2>
-
-    <div class="values-grid">
-      <div class="value-card" data-aos="fade-up">
-        <span class="vc-mark">01</span>
-        <div><h3>Ética e lealdade</h3><p>Compromissos honrados, informações tratadas com cuidado e relações conduzidas com a mesma seriedade no longo prazo — não por política, mas por escolha.</p></div>
-      </div>
-      <div class="value-card" data-aos="fade-up" data-aos-delay="80">
-        <span class="vc-mark">02</span>
-        <div><h3>Compromisso com a entrega</h3><p>Acompanhar a execução até o resultado funcionar de fato. Dar retorno claro quando algo muda e assumir responsabilidade pelo que foi acordado.</p></div>
-      </div>
-      <div class="value-card" data-aos="fade-up" data-aos-delay="140">
-        <span class="vc-mark">03</span>
-        <div><h3>Organização e método</h3><p>Documentação clara, histórico registrado e processos rastreáveis. Organização como respeito ao trabalho dos outros e proteção da qualidade.</p></div>
-      </div>
-      <div class="value-card" data-aos="fade-up" data-aos-delay="200">
-        <span class="vc-mark">04</span>
-        <div><h3>Visão do sistema inteiro</h3><p>Pessoas, processos e tecnologia analisados em conjunto. A causa real quase sempre está na interface entre as áreas — é ali que olho primeiro.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══ 6. FERRAMENTAS E MÉTODOS ══════════════════════════════════════ -->
-<section class="section surface" id="metodos" aria-labelledby="t-metodos">
-  <div class="container">
-    <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">05 /</span>Ferramentas e métodos</p>
+    <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">04 /</span>Método e ferramentas</p>
     <h2 class="section-title" id="t-metodos" data-aos="fade-up">Método primeiro.<br>Ferramentas como apoio.</h2>
 
     <div class="methods-grid">
       <div class="method-list" data-aos="fade-up">
-        <div class="method-row"><span class="mr-arrow">→</span><div><strong>Documentação estruturada</strong><span>Registro claro de escopo, decisões e histórico, para que o conhecimento não dependa de uma única pessoa.</span></div></div>
-        <div class="method-row"><span class="mr-arrow">→</span><div><strong>Acompanhamento de execução</strong><span>Da especificação à entrega, com controle de demandas, prestadores e prazos.</span></div></div>
-        <div class="method-row"><span class="mr-arrow">→</span><div><strong>Análise de causa-raiz</strong><span>Investigar a origem real do problema na interface entre áreas, não apenas o sintoma visível.</span></div></div>
-        <div class="method-row"><span class="mr-arrow">→</span><div><strong>Padronização e melhoria contínua</strong><span>Transformar o que funcionou em processo repetível e mensurável.</span></div></div>
+        <div class="method-row"><span class="mr-arrow">→</span><div><strong>Diagnóstico e mapeamento</strong></div></div>
+        <div class="method-row"><span class="mr-arrow">→</span><div><strong>Documentação e checklists</strong></div></div>
+        <div class="method-row"><span class="mr-arrow">→</span><div><strong>Acompanhamento de prestadores</strong></div></div>
+        <div class="method-row"><span class="mr-arrow">→</span><div><strong>Comunicação entre áreas</strong></div></div>
+        <div class="method-row"><span class="mr-arrow">→</span><div><strong>IA aplicada com julgamento humano</strong></div></div>
       </div>
 
       <aside class="ia-note" data-aos="fade-left" data-aos-delay="80">
-        <p class="eyebrow" style="margin-bottom:0.75rem">IA como apoio</p>
-        <h3>Uma ferramenta a serviço do julgamento</h3>
-        <p>Uso IA para potencializar <strong>análise, documentação, pesquisa e prototipação</strong>. A experiência define o que perguntar, como avaliar o resultado e o que fazer com a informação — a decisão continua sendo humana.</p>
+        <p class="eyebrow" style="margin-bottom:0.75rem">Método primeiro</p>
+        <h3>IA como ampliação, não substituição</h3>
+        <p>Uso tecnologia e IA como instrumentos de ampliação do trabalho, não como substitutos do julgamento humano.</p>
+        <p>A IA me apoia em pesquisa, análise, documentação, organização de conhecimento, prototipação e estruturação de soluções. Minha visão futura é usar IA para orquestrar informações, processos e decisões no mundo empresarial, sempre com responsabilidade e critério humano.</p>
         <div class="ia-tags">
+          <span class="chip">pesquisa</span>
           <span class="chip">análise</span>
           <span class="chip">documentação</span>
-          <span class="chip">pesquisa</span>
           <span class="chip">prototipação</span>
         </div>
       </aside>
@@ -568,38 +592,63 @@
 </section>
 
 
+<!-- ═══ 5. VALORES ════════════════════════════════════════════════════ -->
+<section class="section surface" id="valores" aria-labelledby="t-valores">
+  <div class="container">
+    <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">05 /</span>Valores que orientam meu trabalho</p>
+    <h2 class="section-title" id="t-valores" data-aos="fade-up">O que sustenta cada<br>decisão e cada entrega.</h2>
+
+    <div class="values-grid">
+      <div class="value-card" data-aos="fade-up">
+        <span class="vc-mark">01</span>
+        <div><h3>Confiança</h3><p>Cumprir o combinado, cuidar das informações e assumir responsabilidade pela entrega.</p></div>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="80">
+        <span class="vc-mark">02</span>
+        <div><h3>Ética</h3><p>Agir com clareza, respeito e correção, mesmo quando isso exige mais esforço.</p></div>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="140">
+        <span class="vc-mark">03</span>
+        <div><h3>Lealdade</h3><p>Preservar relações, clientes, parceiros e a qualidade do trabalho no longo prazo.</p></div>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+        <span class="vc-mark">04</span>
+        <div><h3>Compromisso</h3><p>Acompanhar detalhes, pendências e resultados até a entrega funcionar.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ═══ 7. TRAJETÓRIA ═════════════════════════════════════════════════ -->
 <section class="section" id="trajetoria" aria-labelledby="t-trajetoria">
   <div class="container">
-    <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">06 /</span>Trajetória</p>
-    <h2 class="section-title" id="t-trajetoria" data-aos="fade-up">Experiência construída<br>passo a passo.</h2>
+    <p class="eyebrow"><span class="eyebrow-num" aria-hidden="true">06 /</span>Base profissional</p>
+    <h2 class="section-title" id="t-trajetoria" data-aos="fade-up">Base profissional.</h2>
 
     <div class="timeline">
       <div class="tl-row" data-aos="fade-right">
         <div class="tl-date">Recente</div>
         <div class="tl-line"><div class="tl-dot"></div></div>
         <div class="tl-content" data-date="Recente">
-          <div class="tl-role">Setor Moveleiro — Projetos e Fábrica</div>
-          <div class="tl-company">VOI Ambientes — Instalação, Projeto, Engenharia e Produção</div>
-          <div class="tl-desc">Coordenação de processos entre projeto, produção, entrega e instalação, com uso do TopSolid Planner. Documentação, análise de gargalos e melhoria operacional, com apoio de ERP/sistema integrado a IA.</div>
+          <div class="tl-role">VOI Ambientes — Projetos, Engenharia e Operação</div>
+          <div class="tl-desc">Processos entre projeto, produção, entrega e instalação. Documentação, análise de gargalos e sistema interno com IA.</div>
         </div>
       </div>
       <div class="tl-row" data-aos="fade-right" data-aos-delay="80">
         <div class="tl-date">Varejo</div>
         <div class="tl-line"><div class="tl-dot"></div></div>
         <div class="tl-content" data-date="Varejo">
-          <div class="tl-role">Implantação de Segurança e Monitoramento</div>
-          <div class="tl-company">Kognos Tecnologia</div>
-          <div class="tl-desc">Central de monitoramento CFTV, antifurto e monitoramento de PDVs em rede de supermercados. Acompanhamento de prestadores, treinamento e suporte pós-instalação.</div>
+          <div class="tl-role">Kognos — Segurança e Monitoramento</div>
+          <div class="tl-desc">CFTV, antifurto e monitoramento de PDVs em rede supermercadista. Prestadores, treinamento e pós-instalação.</div>
         </div>
       </div>
       <div class="tl-row" data-aos="fade-right" data-aos-delay="160">
         <div class="tl-date">Corporativo</div>
         <div class="tl-line"><div class="tl-dot"></div></div>
         <div class="tl-content" data-date="Corporativo">
-          <div class="tl-role">Atuação Técnico-Comercial</div>
-          <div class="tl-company">Sensormatic / Microsens — Tecnologia e Segurança</div>
-          <div class="tl-desc">Tecnologia corporativa e segurança eletrônica: relacionamento técnico-comercial, clientes e fornecedores, suporte e pós-venda. Ciclo completo de projeto, do levantamento à entrega.</div>
+          <div class="tl-role">Sensormatic / Microsens — Tecnologia e Segurança</div>
+          <div class="tl-desc">Tecnologia corporativa, clientes, fornecedores, técnico-comercial, suporte e pós-venda.</div>
         </div>
       </div>
       <div class="tl-row" data-aos="fade-right" data-aos-delay="240">
@@ -607,8 +656,7 @@
         <div class="tl-line"><div class="tl-dot"></div></div>
         <div class="tl-content" data-date="Formação">
           <div class="tl-role">Análise de Sistemas</div>
-          <div class="tl-company">Base técnica e início de carreira</div>
-          <div class="tl-desc">Ponto de partida para décadas ligadas à tecnologia corporativa. Desde o início, o interesse foi entender como sistemas e pessoas funcionam juntos — não o aspecto técnico isolado.</div>
+          <div class="tl-desc">Base técnica para compreender sistemas, pessoas e operação de forma integrada.</div>
         </div>
       </div>
     </div>
@@ -620,24 +668,44 @@
 <section class="opps" id="oportunidades" aria-labelledby="t-oportunidades">
   <div class="container">
     <p class="eyebrow" data-aos="fade-up"><span class="eyebrow-num" aria-hidden="true">07 /</span>Oportunidades que busco</p>
-    <h2 id="t-oportunidades" data-aos="fade-up" data-aos-delay="60">Aberto a oportunidades onde operação, tecnologia e entrega precisam caminhar juntas.</h2>
+    <h2 id="t-oportunidades" data-aos="fade-up" data-aos-delay="60">Funções e setores onde gero mais valor.</h2>
     <p class="opps-lead" data-aos="fade-up" data-aos-delay="120">
-      Busco posições onde a coordenação entre áreas, fornecedores e clientes seja decisiva para o resultado —
-      e onde experiência prática, organização e acompanhamento de execução façam diferença real.
+      Busco oportunidades CLT ou PJ, desde que haja alinhamento claro de escopo, responsabilidade e condições.
+    </p>
+    <p class="opps-lead" data-aos="fade-up" data-aos-delay="160">
+      Tenho interesse em funções ligadas a operações, implantação, projetos técnicos, infraestrutura,
+      processos, técnico-comercial, Customer Success Técnico, campo, fornecedores e melhoria de entregas.
     </p>
 
-    <div class="opps-grid">
-      <div class="opp-item" data-aos="fade-up"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Coordenação de operações e projetos técnicos</span></div>
-      <div class="opp-item" data-aos="fade-up" data-aos-delay="60"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Implantação e acompanhamento de soluções</span></div>
-      <div class="opp-item" data-aos="fade-up" data-aos-delay="120"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Gestão técnico-operacional e de prestadores</span></div>
-      <div class="opp-item" data-aos="fade-up"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Melhoria de processos e documentação</span></div>
-      <div class="opp-item" data-aos="fade-up" data-aos-delay="60"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Relacionamento técnico com clientes e fornecedores</span></div>
-      <div class="opp-item" data-aos="fade-up" data-aos-delay="120"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span>Pós-implantação, suporte e Customer Success</span></div>
+    <div class="opps-block" data-aos="fade-up">
+      <h3>Cargos</h3>
+      <div class="opp-chips">
+        <span class="opp-chip">Analista de Implantação</span>
+        <span class="opp-chip">Analista de Infraestrutura / Expansão</span>
+        <span class="opp-chip">Analista Técnico-Operacional</span>
+        <span class="opp-chip">Analista de Operações</span>
+        <span class="opp-chip">Analista de Projetos Técnicos</span>
+        <span class="opp-chip">Analista Técnico-Comercial</span>
+        <span class="opp-chip">Customer Success Técnico</span>
+        <span class="opp-chip">Analista de Processos</span>
+        <span class="opp-chip">Analista de Campo / Instalações</span>
+      </div>
+    </div>
+
+    <div class="opps-block" data-aos="fade-up" data-aos-delay="80">
+      <h3>Setores</h3>
+      <div class="opp-chips">
+        <span class="opp-chip">Indústria</span>
+        <span class="opp-chip">Redes de Supermercados</span>
+        <span class="opp-chip">Integradoras de Tecnologia</span>
+        <span class="opp-chip">Moveleiro Premium</span>
+        <span class="opp-chip">Varejo</span>
+      </div>
     </div>
 
     <div class="opps-foot" data-aos="fade-up">
       <a href="#contato" class="btn btn-amber">
-        Vamos conversar
+        Entrar em contato
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
       </a>
       <span class="opps-target">Foco em médias e grandes empresas — também aberto a pequenas e médias.</span>
@@ -652,12 +720,11 @@
     <div class="contact-grid">
       <div data-aos="fade-right">
         <span class="avail-badge"><span class="avail-dot-el"></span> Aberto a novas oportunidades</span>
-        <h2 class="contact-title" id="t-contato">Operação, tecnologia e entrega<br>caminhando juntas.</h2>
-        <p class="contact-lead">Se a sua operação precisa de alguém que entenda o lado técnico e o lado do cliente, que organize processos e acompanhe a execução até funcionar — vamos trocar uma ideia.</p>
-        <p class="contact-lead">Sem pressão. Uma conversa direta para entender se faz sentido trabalharmos juntos.</p>
+        <h2 class="contact-title" id="t-contato">Vamos conversar.</h2>
+        <p class="contact-lead">Estou disponível para oportunidades CLT ou PJ em funções técnico-operacionais, técnico-comerciais, implantação, operações, projetos técnicos e Customer Success Técnico.</p>
         <a href="mailto:royalpix.dev@gmail.com" class="btn btn-primary" style="margin-top:0.5rem">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          Enviar mensagem
+          Entrar em contato
         </a>
       </div>
 
