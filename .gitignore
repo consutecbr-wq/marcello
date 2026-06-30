@@ -1,0 +1,12 @@
+# Backups e versões antigas (não publicar)
+backup1/
+backup2/
+index2.html
+tokens.css
+
+# Configuração local do Claude Code
+.claude/
+
+# Sistema
+Thumbs.db
+.DS_Store
